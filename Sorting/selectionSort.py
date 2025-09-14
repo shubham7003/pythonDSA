@@ -1,15 +1,15 @@
 def selectioonSort(arr):
-    n = len(arr)
+    n = len(arr)   #length of array
 
-    for i in range(n-1):
+    for i in range(n):  #traversing through all elements
 
-        min = i
+        min = i # assuming first element of unsorted array as minimum
 
-        for j in range(i+1,n):
-            if arr[j] < arr[min]:
-                min = j
+        for j in range(i+1,n): #traversing through unsorted elements
+            if arr[j] < arr[min]: #comparing with assumed minimum
+                min = j #updating index of minimum element if any element is smaller than assumed minimum
 
-        arr[i] , arr[min] = arr[min], arr[i]
+        arr[i] , arr[min] = arr[min], arr[i] #swapping minimum element with first element of unsorted array
         
     return arr
 
