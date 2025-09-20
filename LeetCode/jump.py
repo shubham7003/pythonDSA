@@ -1,10 +1,12 @@
 class Solution:
-    def fun(self,arr):
-        range = 0
+    def fun(self, arr):
+        max_reach = 0
         for i in range(len(arr)):
-            if(range < i): return False
-            range = max(range, arr[i]+i)
-            if(range > len(arr)-1): return True
+            if max_reach < i:
+                return False
+            max_reach = max(max_reach, arr[i] + i)
+            if max_reach > len(arr) - 1:
+                return True
         return True
 
 s1 = Solution()
